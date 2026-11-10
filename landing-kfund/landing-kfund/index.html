@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lean Finance × K Fund · Ventajas para participadas</title>
+<meta name="description" content="Ventajas de Lean Finance para las startups participadas de K Fund: diagnóstico ENISA gratuito, CFO externo y asesoría.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="assets/favicon.png">
+<link rel="preload" href="fonts/CarmenSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face {
+  font-family: "Carmen Sans";
+  src: url("fonts/CarmenSans-Bold.woff2") format("woff2");
+  font-weight: 700; font-style: normal; font-display: swap;
+}
+html, body { margin: 0; padding: 0; background: #0F1A45; }
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+.lfk, .lfk * { box-sizing: border-box; margin: 0; padding: 0; }
+.lfk {
+  --brand-500: #0F1A45;
+  --accent-400: #21E2DF;
+  --accent-500: #23D4D0;
+  --accent-700: #1A9F9C;
+  --accent-100: #AFF1F1;
+  --accent-50:  #E2F9F9;
+  --neutral-50:  #FAFAFA;
+  --neutral-200: #E5E5E5;
+  --neutral-500: #737373;
+  --neutral-600: #525252;
+  --neutral-700: #404040;
+  --label-grey:  #6B6B6B;
+  --section-teal: #147A77;
+  --display: "Carmen Sans", "Lato", sans-serif;
+  --body: "Lato", sans-serif;
+  font-family: var(--body);
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+}
+.lfk a { text-decoration: none; }
+.lfk img { display: block; max-width: none; }
+.lfk a:focus-visible, .lfk summary:focus-visible { outline: 3px solid var(--accent-500); outline-offset: 3px; }
+
+/* ---------- Pantalla (frame 1440×900) ---------- */
+.lfk-screen {
+  position: relative; min-height: 100vh;
+  display: flex; flex-direction: column;
+  padding: 0 80px;
+  overflow: hidden;
+}
+.lfk-screen > * { position: relative; z-index: 1; width: 100%; max-width: 1280px; margin-left: auto; margin-right: auto; }
+
+/* ---------- Cabecera fija (logos claro/oscuro según la sección) ---------- */
+.lfk { --nav-h: 104px; }
+.lfk-screen { padding-top: var(--nav-h); }
+.lfk-nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 999;
+  padding: 0 80px; transition: background-color .25s ease;
+}
+.lfk-nav__inner { max-width: 1280px; margin: 0 auto; height: var(--nav-h); display: flex; align-items: center; justify-content: space-between; }
+.lfk-logos { display: flex; align-items: center; gap: 10px; }
+.lfk-logo-lf { width: 116px; height: 40px; object-fit: contain; }
+.lfk-logo-kf { width: 112px; height: 56px; object-fit: contain; }
+.lfk-nav .on-light { display: none; }
+.lfk-nav.is-light .on-dark { display: none; }
+.lfk-nav.is-light .on-light { display: block; }
+/* Al hacer scroll, un fondo translúcido evita que el texto pase por debajo de los logos */
+.lfk-nav.is-scrolled { -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); background: rgba(15, 26, 69, .6); }
+.lfk-nav.is-scrolled.is-light { background: rgba(250, 250, 250, .85); }
+.lfk-contact-btn {
+  display: inline-flex; padding: 13px 22px; border-radius: 8px;
+  background: var(--accent-500); color: var(--brand-500);
+  font: 700 15px/normal var(--body); white-space: nowrap;
+}
+
+/* ---------- 01 · Hero ---------- */
+.lfk-s1 { background: var(--brand-500) url("assets/hero.jpg") center / cover no-repeat; }
+.lfk-s1 .lfk-content {
+  flex: 1 0 0; display: flex; flex-direction: column; justify-content: center; align-items: flex-start;
+  gap: 28px; padding-bottom: 72px;
+}
+.lfk-kicker { font: 400 14px/1.4 var(--body); color: var(--neutral-200); }
+.lfk-s1 h1 { width: 1100px; max-width: 100%; font-family: var(--display); font-weight: 700; line-height: 1.05; letter-spacing: -1.36px; }
+.lfk-s1 h1 .l1 { display: block; font-size: 68px; color: #fff; }
+.lfk-s1 h1 .l2 { display: block; font-size: 64px; color: var(--accent-500); }
+.lfk-s1 .lfk-lead { width: 820px; max-width: 100%; font: 400 20px/1.4 var(--body); color: var(--neutral-200); }
+.lfk-s1 .lfk-lead span { display: block; }
+.lfk-outline-btn {
+  display: inline-flex; padding: 16px 28px; border: 1px solid var(--accent-400); border-radius: 8px;
+  font: 700 16px/1.4 var(--body); color: var(--accent-500); white-space: nowrap;
+}
+
+/* ---------- 02 · Por qué ahora ---------- */
+.lfk-s2 { background: var(--neutral-50); }
+.lfk-s2 .lfk-content { flex: 1 0 0; display: flex; flex-direction: column; justify-content: center; gap: 48px; padding-bottom: 72px; }
+.lfk-label { font: 700 14px/1.4 var(--body); letter-spacing: 1.12px; text-transform: uppercase; }
+.lfk-s2 .lfk-label { color: var(--label-grey); }
+.lfk-ideas { display: flex; gap: 48px; align-items: flex-start; }
+.lfk-idea { flex: 1 0 0; min-width: 0; display: flex; flex-direction: column; gap: 20px; padding-top: 24px; border-top: 1px solid var(--accent-700); }
+.lfk-idea--2 { border-top-color: var(--accent-500); }
+.lfk-idea .num { font: 700 16px/1.4 var(--display); color: var(--brand-500); }
+.lfk-idea .txt { font: 400 30px/1.3 var(--body); letter-spacing: -0.3px; color: var(--neutral-600); }
+.lfk-idea--2 .txt { color: var(--neutral-500); }
+.lfk-idea .txt span { display: block; }
+
+/* ---------- 03 · Lo que te ofrecemos ---------- */
+.lfk-s3 { background: var(--brand-500) url("assets/foto.jpg") center / cover no-repeat; justify-content: center; }
+.lfk-s3::before { content: ""; position: absolute; inset: 0; background: rgba(107,107,107,.2); z-index: 0; }
+.lfk-s3::after  { content: ""; position: absolute; inset: 0; background: var(--brand-500); opacity: .55; z-index: 0; }
+.lfk-s3 .lfk-content { flex: 1 0 0; display: flex; flex-direction: column; gap: 32px; padding: 80px 0; }
+.lfk-s3 .lfk-label { color: #fff; }
+.lfk-h2 { font: 700 48px/1.1 var(--display); letter-spacing: -0.96px; color: #fff; }
+.lfk-bento { flex: 1 0 0; display: flex; gap: 20px; align-items: stretch; min-height: 0; }
+.lfk-grid { flex: 1 0 0; min-width: 0; display: flex; flex-direction: column; gap: 20px; }
+.lfk-row { flex: 1 0 0; display: flex; gap: 20px; }
+.lfk-card {
+  flex: 1 0 0; min-width: 0;
+  display: flex; flex-direction: column; justify-content: flex-end; gap: 12px;
+  padding: 28px; border-radius: 12px;
+  background: rgba(255,255,255,.8); border: 1px solid rgba(255,255,255,.5);
+  -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px);
+}
+.lfk-card h3 { font: 700 22px/1.15 var(--display); letter-spacing: -0.22px; color: var(--brand-500); }
+.lfk-card p  { font: 400 15px/1.4 var(--body); color: var(--neutral-600); }
+.lfk-card p.dark { color: var(--neutral-700); }
+.lfk-card--main { padding: 32px; }
+.lfk-card--main h3 { font-size: 40px; letter-spacing: -0.4px; }
+.lfk-card--main h3 span { display: block; }
+.lfk-card--main p { font-size: 18px; }
+
+/* ---------- 04 · Escríbenos si + Servicios ---------- */
+.lfk-s4 { background: var(--section-teal); padding-bottom: 80px; }
+.lfk-s4 .lfk-content { flex: 1 0 0; padding-top: 96px; }
+.lfk-cols { display: flex; gap: 64px; align-items: flex-start; }
+.lfk-left { width: 460px; flex: none; display: flex; flex-direction: column; gap: 28px; }
+.lfk-item { display: flex; gap: 14px; align-items: flex-start; }
+.lfk-check {
+  flex: none; width: 24px; height: 24px; border-radius: 999px; background: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font: 400 14px/1.4 var(--body); color: var(--section-teal);
+}
+.lfk-item p { flex: 1 0 0; min-width: 0; font: 400 18px/1.4 var(--body); color: #fff; }
+.lfk-right { flex: 1 0 0; min-width: 0; }
+.lfk-s4 .lfk-label { color: #fff; }
+.lfk-sp { height: 68px; }
+.lfk-acc details { border-top: 1px solid rgba(255,255,255,.2); padding: 18px 0; }
+.lfk-acc summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 16px; }
+.lfk-acc summary::-webkit-details-marker { display: none; }
+.lfk-acc summary .t { flex: 1 0 0; min-width: 0; font: 700 18px/1.4 var(--body); color: #fff; }
+.lfk-acc summary svg { flex: none; width: 20px; height: 20px; transition: transform .2s ease; }
+.lfk-acc details[open] summary svg { transform: rotate(180deg); }
+.lfk-acc details p { margin-top: 10px; font: 400 15px/1.4 var(--body); color: var(--accent-50); }
+
+/* ================= MOBILE (frames 390 px) ================= */
+@media (max-width: 767px) {
+  .lfk-screen { padding: var(--nav-h) 20px 0; min-height: 100svh; }
+  .lfk { --nav-h: 71px; }
+  .lfk-nav { padding: 0 20px; }
+  .lfk-logo-lf { width: 81px; height: 28px; }
+  .lfk-logo-kf { width: 78px; height: 39px; }
+  .lfk-contact-btn { padding: 13px 14px; }
+
+  .lfk-s1 .lfk-content { flex: 1 0 auto; gap: 43px; padding: 32px 0 56px; }
+  .lfk-kicker { display: none; }
+  .lfk-s1 h1 { letter-spacing: -0.72px; }
+  .lfk-s1 h1 .l1, .lfk-s1 h1 .l2 { font-size: 36px; }
+  .lfk-s1 .lfk-lead { font-size: 18px; }
+
+  .lfk-s2 .lfk-content { flex: 0 0 auto; justify-content: flex-start; padding: 32px 0 56px; }
+  .lfk-ideas { flex-direction: column; gap: 32px; }
+  .lfk-idea { flex: none; width: 100%; }
+  .lfk-idea .txt { font-size: 20px; letter-spacing: -0.2px; }
+
+  .lfk-s3 .lfk-content { flex: 0 0 auto; padding: 32px 0 56px; }
+  .lfk-h2 { font-size: 36px; letter-spacing: -0.72px; }
+  .lfk-bento, .lfk-grid, .lfk-row { flex-direction: column; flex: none; }
+  .lfk-card, .lfk-card--main { flex: none; padding: 24px; }
+  .lfk-card--main h3 { font-size: 24px; letter-spacing: -0.24px; }
+  .lfk-card--main p { font-size: 17px; }
+
+  .lfk-s4 { padding-bottom: 50px; }
+  .lfk-s4 .lfk-content { flex: 0 0 auto; padding: 32px 0 16px; }
+  .lfk-cols { flex-direction: column; gap: 70px; }
+  .lfk-left { width: 100%; }
+  .lfk-item p { font-size: 17px; }
+  .lfk-s4 .lfk-right .lfk-label { color: var(--neutral-200); }
+  .lfk-sp { height: 12px; }
+}
+@media (prefers-reduced-motion: reduce) { .lfk-acc summary svg { transition: none; } .lfk-nav { transition: none; } }
+</style>
+</head>
+<body>
+<div class="lfk">
+
+  <!-- Cabecera fija: cambia sola a logos de color sobre las secciones claras (data-header="light") -->
+  <header class="lfk-nav" id="lfk-nav">
+    <div class="lfk-nav__inner">
+      <div class="lfk-logos">
+        <img class="lfk-logo-lf on-dark" src="assets/logo-lf-blanco.png" alt="Lean Finance">
+        <img class="lfk-logo-lf on-light" src="assets/logo-lf-color.png" alt="" aria-hidden="true">
+        <img class="lfk-logo-kf on-dark" src="assets/logo-kfund-blanco.png" alt="K Fund">
+        <img class="lfk-logo-kf on-light" src="assets/logo-kfund-oscuro.png" alt="" aria-hidden="true">
+      </div>
+      <a class="lfk-contact-btn js-contacto" href="#">Contactar</a>
+    </div>
+  </header>
+
+  <!-- 01 · Hero -->
+  <section class="lfk-screen lfk-s1" data-header="dark">
+    <div class="lfk-content">
+      <p class="lfk-kicker">Ventajas para startups participadas de K Fund · Lean Finance</p>
+      <h1><span class="l1">¿Acabas de cerrar ronda?</span><span class="l2">Estira tu runway sin diluirte más.</span></h1>
+      <p class="lfk-lead"><span>La ronda que acabas de cerrar puede servirte para pedir un préstamo ENISA.</span> <span>Te decimos gratis si eres elegible y cuánto tiene sentido pedir.</span></p>
+      <a class="lfk-outline-btn js-diagnostico" href="#">Reserva tu diagnóstico ENISA gratuito</a>
+    </div>
+  </section>
+
+  <!-- 02 · Por qué ahora -->
+  <section class="lfk-screen lfk-s2" data-header="light" aria-labelledby="lfk-why">
+    <div class="lfk-content">
+      <h2 class="lfk-label" id="lfk-why">Por qué ahora</h2>
+      <div class="lfk-ideas">
+        <div class="lfk-idea">
+          <p class="num">01</p>
+          <p class="txt"><span>ENISA es un préstamo participativo público.</span> <span>No pide garantías ni aval personal del founder, y el importe se calcula en función de los fondos propios de la empresa.</span></p>
+        </div>
+        <div class="lfk-idea lfk-idea--2">
+          <p class="num">02</p>
+          <p class="txt">Justo después de una ronda tus fondos propios están en su punto más alto. Es el mejor momento para pedirlo y sumar deuda sin dilución al ticket de tus inversores.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 · Lo que te ofrecemos -->
+  <section class="lfk-screen lfk-s3" data-header="dark" aria-labelledby="lfk-offer">
+    <div class="lfk-content">
+      <p class="lfk-label">Por ser participada</p>
+      <h2 class="lfk-h2" id="lfk-offer">Lo que te ofrecemos</h2>
+      <div class="lfk-bento">
+        <article class="lfk-card lfk-card--main">
+          <h3><span>ENISA apalancado</span><span>en la ronda</span></h3>
+          <p>Preparamos y tramitamos la solicitud de principio a fin.</p>
+        </article>
+        <div class="lfk-grid">
+          <div class="lfk-row">
+            <article class="lfk-card"><h3>Diagnóstico ENISA gratuito</h3><p class="dark">Elegibilidad, importe razonable y calendario de solicitud.</p></article>
+            <article class="lfk-card"><h3>CFO externo</h3><p>Con [condición preferente a definir].</p></article>
+          </div>
+          <div class="lfk-row">
+            <article class="lfk-card"><h3>Asesoría fiscal y contable</h3><p>Con [condición preferente a definir].</p></article>
+            <article class="lfk-card"><h3>Sesión para el portfolio</h3><p>Cómo apalancar una ronda con ENISA.</p></article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 · Escríbenos si + Servicios -->
+  <section class="lfk-screen lfk-s4" data-header="dark" aria-labelledby="lfk-write">
+    <div class="lfk-content">
+      <div class="lfk-cols">
+        <div class="lfk-left">
+          <h2 class="lfk-h2" id="lfk-write">Escríbenos si...</h2>
+          <div class="lfk-item"><span class="lfk-check" aria-hidden="true">✓</span><p>Has cerrado ronda en los últimos meses y no has pedido ENISA.</p></div>
+          <div class="lfk-item"><span class="lfk-check" aria-hidden="true">✓</span><p>Vas a preparar la siguiente ronda y tus números no aguantan una due diligence.</p></div>
+          <div class="lfk-item"><span class="lfk-check" aria-hidden="true">✓</span><p>El founder sigue llevando las finanzas a ratos.</p></div>
+          <div class="lfk-item"><span class="lfk-check" aria-hidden="true">✓</span><p>Tu reporting a inversores te cuesta días cada trimestre.</p></div>
+        </div>
+        <div class="lfk-right">
+          <h2 class="lfk-label">Nuestros servicios</h2>
+          <div class="lfk-sp"></div>
+          <div class="lfk-acc">
+            <details data-pc-open><summary><span class="t">Financiación pública (ENISA)</span><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="#AFF1F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary><p>Préstamos participativos sin avales ni garantías personales.</p></details>
+            <details data-pc-open><summary><span class="t">Certificado de Empresa Emergente</span><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="#AFF1F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary><p>Ventajas fiscales de la Ley de Startups.</p></details>
+            <details data-pc-open data-mobile-open><summary><span class="t">Fundraising privado</span><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="#AFF1F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary><p>Modelo financiero, valoración y documentación para inversores.</p></details>
+            <details><summary><span class="t">CFO externo</span><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="#AFF1F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary><p>Para preparar la siguiente ronda, crecer o reestructurar, y para el reporting a inversores.</p></details>
+            <details><summary><span class="t">Contabilidad en tiempo real</span><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="#AFF1F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary><p>Asesoría fiscal y contable conectada: tus números al día, no a fin de trimestre.</p></details>
+            <details><summary><span class="t">Asesoría laboral</span><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="#AFF1F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary><p>Nóminas, contratos y Seguridad Social.</p></details>
+            <details><summary><span class="t">Asesoría legal</span><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="#AFF1F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary><p>Societario, pactos de socios y contratos.</p></details>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script>
+(function () {
+  /* === ENLACES: cambia aquí cuando tengáis el calendario === */
+  var CTA_CONTACTO    = "mailto:javier@leanfinance.es?subject=Vengo%20de%20K%20Fund";
+  var CTA_DIAGNOSTICO = "mailto:javier@leanfinance.es?subject=Vengo%20de%20K%20Fund%20-%20Diagn%C3%B3stico%20ENISA";
+
+  document.querySelectorAll('.lfk .js-contacto').forEach(function (a) { a.href = CTA_CONTACTO; });
+  document.querySelectorAll('.lfk .js-diagnostico').forEach(function (a) { a.href = CTA_DIAGNOSTICO; });
+
+  /* Cabecera: logos oscuros/claros según la sección que tiene debajo */
+  var nav = document.getElementById('lfk-nav');
+  var sections = document.querySelectorAll('.lfk [data-header]');
+  var ticking = false;
+  function updateNav() {
+    ticking = false;
+    var line = nav.offsetHeight / 2;
+    var light = false;
+    for (var i = 0; i < sections.length; i++) {
+      var r = sections[i].getBoundingClientRect();
+      if (r.top <= line && r.bottom > line) { light = sections[i].getAttribute('data-header') === 'light'; break; }
+    }
+    nav.classList.toggle('is-light', light);
+    nav.classList.toggle('is-scrolled', window.scrollY > 8);
+  }
+  function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(updateNav); } }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  updateNav();
+
+  /* Estado inicial del acordeón igual que en Figma: PC 3 primeros abiertos, móvil solo "Fundraising privado" */
+  var mobile = window.matchMedia('(max-width: 767px)').matches;
+  document.querySelectorAll('.lfk-acc details').forEach(function (d) {
+    d.open = mobile ? d.hasAttribute('data-mobile-open') : d.hasAttribute('data-pc-open');
+  });
+})();
+</script>
+</body>
+</html>
